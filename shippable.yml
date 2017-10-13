@@ -1,8 +1,26 @@
 language: java
 
+branches:
+  only:
+    - master
+
 jdk:
-- openjdk8
+  - openjdk8
+  
+  env:
+  global:
+    - TEST_RESULTS_DIR=$SHIPPABLE_REPO_DIR/shippable/testresults
+    - TESTS_LOC_DIR=$SHIPPABLE_REPO_DIR/tests
+    
+    build:
+
+
+  ci:
+    - mkdir -p $TEST_RESULTS_DIR && mkdir -p $CODE_COVERAGE_DIR
+    - pushd $TESTS_LOC_DIR
+    - popd
+
 
 after_success:
-- mvn clean cobertura:cobertura
-- mvn test
+  - mvn clean cobertura:cobertura
+  - mvn test
