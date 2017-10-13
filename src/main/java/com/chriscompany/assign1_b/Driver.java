@@ -85,8 +85,7 @@ public class Driver {
     ArrayList<Module> law_mod = new ArrayList<Module>();
     ArrayList<Module> arts_mod = new ArrayList<Module>();
     
-    //Add modules to module arrays
-    
+    //Add modules to module arrays   
     all_mod.add(math);
     all_mod.add(eng);
     all_mod.add(art);
@@ -115,7 +114,6 @@ public class Driver {
             
     
     //Output
-
     for (i=0; i<all_progs.size(); i++){
         System.out.println("----------------");
         System.out.println(all_progs.get(i).getName());
