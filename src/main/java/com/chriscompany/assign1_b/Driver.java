@@ -126,9 +126,9 @@ public class Driver {
             for (k=0; k<all_progs.get(i).getModules().get(j).getStudents().size(); k++){
                 System.out.println(all_progs.get(i).getModules().get(j).getStudents().get(k).getName());
             
+                }
             }
         }
-         }
     
     }
     
